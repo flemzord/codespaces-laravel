@@ -4,6 +4,7 @@
     "dockerComposeFile": ["docker-compose.yml"],
     "workspaceFolder": "/workspace",
     "service": "app",
+    "shutdownAction": "stopCompose",
     "extensions": [
 		"editorconfig.editorconfig"
 	],
@@ -11,11 +12,13 @@
         "terminal.integrated.shell.linux": "/bin/bash"
     },
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    "forwardPorts": [],
+    "forwardPorts": [80, 8000],
 
     // Use 'postCreateCommand' to run commands after the container is created.
-    "postCreateCommand": "cp .env.example .env && composer install && yarn install && yarn run development",
-
-    // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-    "remoteUser": "vscode"
+	"postCreateCommand": "cp .env.example .env && composer install && php artisan key:generate && yarn install && yarn run development",
+	"portsAttributes": {
+		"80": {
+			"label": "HTTP"
+		}
+	},
 }
