@@ -1,0 +1,21 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+    "name": "codespaces-laravel",
+    "dockerComposeFile": ["docker-compose.yml"],
+    "workspaceFolder": "/workspace",
+    "service": "app",
+    "extensions": [
+		"editorconfig.editorconfig"
+	],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [],
+
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "cp .env.example .env && composer install && yarn install && yarn run development",
+
+    // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "vscode"
+}
