@@ -18,7 +18,7 @@
         "CoenraadS.bracket-pair-colorizer"
 	],
     "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
+        "#terminal.integrated.shell.linux": "/bin/bash"
     },
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     "forwardPorts": [80],
