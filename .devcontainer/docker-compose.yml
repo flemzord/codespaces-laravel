@@ -14,7 +14,7 @@ services:
         PHP_EXTENSION_PDO_PGSQL: 1
         APACHE_DOCUMENT_ROOT: /workspace/public
   db:
-    image: postgres:13
+    image: postgres:16
     restart: unless-stopped
     ports:
         - 5432:5432
@@ -26,6 +26,7 @@ services:
     image: redis:6-alpine
     ports:
       - 6379:6379
+
   mailhog:
     image: mailhog/mailhog
     ports:
