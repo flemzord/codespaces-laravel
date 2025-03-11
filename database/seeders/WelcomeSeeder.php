@@ -14,11 +14,11 @@ class WelcomeSeeder extends Seeder
     public function run(): void
     {
         Welcome::create([
-            'content' => 'Cursorへようこそ！',
+            'content' => 'Laravel！',
         ]);
 
         Welcome::create([
-            'content' => '素晴らしい開発体験をお楽しみください！',
+            'content' => 'PHP',
         ]);
     }
 }
