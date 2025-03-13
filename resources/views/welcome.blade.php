@@ -11,40 +11,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
         <!-- Styles -->
-        <style>
-            body {
-                font-family: 'Figtree', sans-serif;
-                background-color: #f3f4f6;
-            }
-            .container {
-                max-width: 800px;
-                margin: 40px auto;
-                padding: 20px;
-            }
-            .welcome-messages {
-                margin-top: 20px;
-            }
-            .message {
-                background-color: white;
-                border-radius: 8px;
-                padding: 20px;
-                margin-bottom: 15px;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-            h1 {
-                color: #1a202c;
-                margin-bottom: 30px;
-            }
-            .content {
-                color: #4a5568;
-                font-size: 1.1em;
-            }
-            .timestamp {
-                color: #718096;
-                font-size: 0.9em;
-                margin-top: 10px;
-            }
-        </style>
+        <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class="container">
